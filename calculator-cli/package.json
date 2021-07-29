@@ -1,0 +1,38 @@
+{
+  "name": "calculator-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "bin": {
+    "calc": "./index.ts"
+  },
+  "scripts": {
+    "build": "tsc --w",
+    "lint:eslint": "eslint --ext .ts src",
+    "lint:prettier": "prettier --check .",
+    "fix:prettier": "prettier -w .",
+    "fix:eslint": "npm run lint:eslint -- --fix"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "searchingforapuppy",
+  "license": "MIT",
+  "bugs": {},
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}
