@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Books API Example</title>
+  </head>
+  <body>
+    <div id="content">
+      hello
+    </div>
+    <script>
+      const endpoint = "https://www.googleapis.com/books/v1"
+      const query = "hurry"
+      const targetUrl = `${endpoint}/volumes?q=${query}`
+      const f = async(url, data) => {
+        const response = await fetch(targetUrl, data) 
+        return response.json()
+      }
+      console.log(f(targetUrl, {}))
+      // function handleResponse(response) {
+      // for (var i = 0; i < response.items.length; i++) {
+      //   var item = response.items[i];
+      //   // in production code, item.text should have the HTML entities escaped.
+      //   document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
+      // }
+    // }
+    </script>
+    <!-- <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script> -->
+  </body>
+</html>
