@@ -1,10 +1,12 @@
 const menus = {
   main: `
-  'add' ....... add given integers and return its result
-  'even' ...... add only even integers
-  'odd' ....... add only odd integers
-  'version' ... show package version
-  'help'....... show help menu for a command
+  calc command options
+
+    add ....... add given integers and return its result
+    even ...... add only even integers
+    odd ....... add only odd integers
+    version ... show package version
+    help....... show help menu for a command
   `,
 };
 // TODO define and use type definition for "args"
