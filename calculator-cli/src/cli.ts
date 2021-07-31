@@ -1,5 +1,6 @@
 import minimist from "minimist";
 import { version } from "./version";
+import { help } from "./help";
 import { add, even, odd } from "./arith";
 
 export async function cli(argsArray: any[]) {
@@ -7,6 +8,10 @@ export async function cli(argsArray: any[]) {
   let cmd = args._[0];
   if (args.version || args.v) {
     cmd = "version";
+  }
+
+  if (args.help) {
+    cmd = "help";
   }
 
   if (args.add) {
@@ -22,6 +27,10 @@ export async function cli(argsArray: any[]) {
   switch (cmd) {
     case "version":
       version();
+      break;
+
+    case "help":
+      help(args);
       break;
 
     case "add":
